@@ -1,0 +1,27 @@
+.transform-style-preserve-3d {
+    transform-style: preserve-3d;
+  }
+  
+  .backface-hidden {
+    backface-visibility: hidden;
+  }
+  
+  .rotate-y-180 {
+    transform: rotateY(180deg);
+  }
+  
+  .flip-card {
+    perspective: 1000px;
+  }
+  
+  .flipped .rotate-y-180 {
+    transform: rotateY(0);
+  }
+  
+  .flipped .front {
+    transform: rotateY(180deg);
+  }
+  
+  .flipped .back {
+    transform: rotateY(360deg);
+  }

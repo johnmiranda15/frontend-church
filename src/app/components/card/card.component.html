@@ -1,0 +1,38 @@
+<!--Sección para Tarjetas-->
+<section
+  class="flex flex-col items-center gap-[10px] mt-4 sm:flex sm:flex-col sm:gap-[15px] md:flex-row md:flex-wrap md:justify-center md:gap-[20px]"
+>
+  <!--Primera Tarjeta-->
+  <article
+    class="card w-[150px] h-[200px] text-center rounded-lg bg-cover bg-center overflow-hidden transition-transform duration-300 transform-style-preserve-3d cursor-pointer hover:scale-105 hover:shadow-lg sm:w-[190px] sm:h-[230px] md:w-[250px] md:h-[280px] lg:w-[270px] lg:h-[350px]"
+    [ngClass]="{ flipped: isFlipped }"
+    (click)="toggleFlip()"
+    [ngStyle]="{ 'background-image': 'url(' + image + ')' }"
+  >
+    <!--Parte delantera de la Tarjeta-->
+    <div
+      class="backface-hidden absolute w-full h-full flex items-center justify-center p-[10px]"
+    >
+      <h3
+        class="absolute top-4 left-1/2 transform -translate-x-1/2 text-white text-md font-bold bg-black/25 px-2 py-1 rounded-md shadow-lg inline-block"
+      >
+        {{ title }}
+      </h3>
+    </div>
+    <!--Parte Trasera de la Tarjeta-->
+    <div
+      class="absolute w-full h-full bg-[#302023] flex flex-col items-center justify-start p-[10px] rotate-y-180 backface-hidden transition-transform duration-300"
+    >
+      <h3
+        class="flex justify-center items-start text-white text-[25px] p-[10px] rotate-y-180 backface-hidden transition-transform duration-300"
+      >
+        {{ title }}
+      </h3>
+      <p
+        class="flex justify-center items-end text-white text-[20px] p-[10px] rotate-y-180 backface-hidden transition-transform duration-300"
+      >
+        {{ description }}
+      </p>
+    </div>
+  </article>
+</section>

@@ -1,0 +1,79 @@
+<div
+  class="relative flex justify-center items-center border-2 sm:justify-start sm:items-start sm:h-[150vh] md:h-[150vh] md:justify-start md:items-start md:mt-10 lg:w-[100vw] lg:h-[150vh] lg:items-start lg:justify-center lg:mt-10"
+>
+  <section
+    class="bg-cyan-100 mt-10 flex flex-col space-y-6 sm:p-12 md:flex-row md:space-x-6 md:space-y-0 w-full max-w-6xl p-8 rounded-xl shadow-lg text-black overflow-hidden"
+  >
+    <!-- Header Section -->
+    <header class="flex flex-col space-y-8">
+      <h1 class="text-4xl font-bold tracking-wide">Contact Us</h1>
+      <p class="text-xl pt-2">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit culpa
+        sequi magnam veritatis quasi labore ipsam expedita, perspiciatis ad
+        tempore iste quibusdam aperiam atque!
+      </p>
+      <!-- Contact Info Section -->
+      <article class="flex flex-col space-y-4">
+        <div class="inline-flex space-x-2 items-center">
+          <i class="not-italic text-2xl">📱</i>
+          <span class="text-md">+507 6344-2662</span>
+        </div>
+        <div>
+          <i class="not-italic text-2xl">📩</i>
+          <span class="text-md"> Mail: contacto&#64;ejemplo.com</span>
+        </div>
+        <div class="z-10">
+          <img src="assets/img/banner.png" alt="Banner Odoo" class="w-[100%]">
+        </div>
+      </article>
+    </header>
+
+    <!-- Form Section -->
+    <main class="p-4 relative">
+      <div
+        class="absolute z-0 w-40 h-40 bg-teal-400 rounded-full -right-28 -top-28"
+      ></div>
+      <div
+        class="absolute z-0 w-40 h-40 bg-teal-400 rounded-full -left-28 -bottom-16"
+      ></div>
+      <section
+        class="bg-white relative z-10 rounded-xl shadow-lg p-8 text-gray-600 md:w-80 lg:w-[150w] border-2"
+      >
+        <form action="" class="flex flex-col space-y-4">
+          <div>
+            <label for="name" class="text-sm">Your Name</label>
+            <input
+              type="text"
+              id="name"
+              placeholder="Your Name"
+              class="ring-1 ring-gray-500 w-full rounded-md px-4 py-2 mt-2 outline-none focus:ring-2 focus:ring-teal-300"
+            />
+          </div>
+          <div>
+            <label for="email" class="text-sm">Email Address</label>
+            <input
+              type="email"
+              id="email"
+              placeholder="Email Address"
+              class="ring-1 ring-gray-500 w-full rounded-md px-4 py-2 mt-2 outline-none focus:ring-2 focus:ring-teal-300"
+            />
+          </div>
+          <div>
+            <label for="message" class="text-sm">Message</label>
+            <textarea
+              id="message"
+              placeholder="Message"
+              rows="4"
+              class="ring-1 ring-gray-500 w-full rounded-md px-4 py-2 mt-2 outline-none focus:ring-2 focus:ring-teal-300"
+            ></textarea>
+          </div>
+          <button
+            class="inline-block self-center bg-cyan-200 text-white font-bold rounded-lg px-6 py-2 uppercase text-xl"
+          >
+            SEND MESSAGE
+          </button>
+        </form>
+      </section>
+    </main>
+  </section>
+</div>

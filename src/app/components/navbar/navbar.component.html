@@ -1,0 +1,28 @@
+<nav class="bg-[rgba(62,39,35,0.5)] p-2.5 fixed top-0 left-0 w-full z-[1000]">
+  <div>
+    <button class="text-white text-xl p-2.5 lg:hidden" (click)="toggleMenu()">
+      <span class="block w-6 h-0.5 bg-white mb-1"></span>
+      <span class="block w-6 h-0.5 bg-white mb-1"></span>
+      <span class="block w-6 h-0.5 bg-white"></span>
+    </button>
+    <ul class="hidden lg:flex lg:justify-around list-none m-0 p-0">
+      <li><a class="text-white text-xl p-2.5 transition-colors duration-300 hover:text-[#c51414] hover:underline" routerLink="/start">{{title}}</a></li>
+      <li><a class="text-white text-xl p-2.5 transition-colors duration-300 hover:text-[#c51414] hover:underline" routerLink="/start">Inicio</a></li>
+      <li><a class="text-white text-xl p-2.5 transition-colors duration-300 hover:text-[#c51414] hover:underline" routerLink="/nowus">
+        Conócenos</a></li>
+      <li><a class="text-white text-xl p-2.5 transition-colors duration-300 hover:text-[#c51414] hover:underline" routerLink="/creed">Credo</a></li>
+      <li><a class="text-white text-xl p-2.5 transition-colors duration-300 hover:text-[#c51414] hover:underline" routerLink="/sermons">Sermones</a></li>
+      <li><a class="text-white text-xl p-2.5 transition-colors duration-300 hover:text-[#c51414] hover:underline" routerLink="/visitus">Visítanos</a></li>
+    </ul>
+    <div class="fixed top-0 right-0 bg-[rgba(62,39,35,0.8)] w-64 h-full lg:hidden" [ngClass]="{'hidden': !isMenuOpen}">
+      <button class="absolute top-4 right-4 text-white text-2xl" (click)="toggleMenu()">&times;</button>
+      <ul class="flex flex-col mt-12 space-y-4 p-4">
+        <li><a class="text-white text-xl p-4 transition-colors duration-300 hover:text-[#c51414] hover:underline" routerLink="/start" (click)="closeMenu()">Inicio</a></li>
+        <li><a class="text-white text-xl p-4 transition-colors duration-300 hover:text-[#c51414] hover:underline" routerLink="/nowus" (click)="closeMenu()">Conócenos</a></li>
+        <li><a class="text-white text-xl p-4 transition-colors duration-300 hover:text-[#c51414] hover:underline" routerLink="/creed" (click)="closeMenu()">Credo</a></li>
+        <li><a class="text-white text-xl p-4 transition-colors duration-300 hover:text-[#c51414] hover:underline" routerLink="/sermons" (click)="closeMenu()">Sermones</a></li>
+        <li><a class="text-white text-xl p-4 transition-colors duration-300 hover:text-[#c51414] hover:underline" routerLink="/visitus" (click)="closeMenu()">Visitanos</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
