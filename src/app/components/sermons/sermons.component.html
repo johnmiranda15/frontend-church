@@ -1,55 +1,47 @@
-<div
-  class="w-[100vw] flex justify-center mt-[70px] sm:w-[100vw] sm:flex sm:justify-evenly sm:mt-[50px] md:w-[100vw] md:flex md:justify-evenly md:mt-[50px] lg:w-[100vw] lg:flex lg:justify-evenly lg:mt-[50px]"
->
-  <!--Barra Lateral-->
-  <div
-    class="bg-gray-300 hidden lg:p-2 lg:flex lg:flex-col lg:justify-start lg:items-start lg:w-[300px] lg:h-[100vh] border-2 border-red-500"
+<div class="w-screen flex flex-col items-center gap-6 px-4 py-6 pt-[60px] sm:flex-row sm:items-start sm:justify-evenly lg:h-screen">
+  <!-- Barra Lateral -->
+  <aside
+    class="hidden lg:flex flex-col justify-start items-start w-[280px] h-full p-4 bg-gray-300 border-2 border-red-500"
   >
-    <h3>Title</h3>
-    <p>
-      Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minima fugit,
-      vel, aliquid eaque atque adipisci recusandae delectus totam, similique
-      officia porro voluptate. Commodi beatae pariatur hic optio quos maiores
-      aperiam nisi vitae! Quod deleniti reiciendis excepturi doloribus hic, quis
-      maiores, beatae facilis voluptatem, consequuntur voluptas dignissimos
-      voluptates architecto reprehenderit possimus.
+    <h3 class="text-lg font-semibold mb-2">Title</h3>
+    <p class="text-sm leading-relaxed">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima fugit...
     </p>
-  </div>
-<!-- Contenido Principal (Video) -->
-<div
-  class="p-4 flex flex-col justify-center items-center w-[100vw] sm:w-[100vw] md:w-[100vw] lg:w-[50vw] lg:justify-start lg:items-center border-2 border-red-500"
->
-  <div>
+  </aside>
+
+  <!-- Contenido Principal -->
+  <main
+    class="flex flex-col items-center w-full sm:w-[80%] lg:w-[50vw] border-2 border-red-500 p-4 gap-4 lg:h-full"
+  >
     <iframe
-      class="w-[300px] h-[300px] sm:w-[300px] md:w-[500px] lg:w-[50vw] lg:h-[600px]"
+      class="w-[300px] h-[300px] md:w-[500px] lg:w-full lg:h-[400px]"
       [src]="getVideoUrl(mainVideoId)"
       frameborder="0"
       allowfullscreen
     ></iframe>
-  </div>
-  <div class="p-2"></div>
-  <div class="bg-gray-300 w-[300px] sm:w-[300px] md:w-[500px] lg:w-[50vw]">
-    <h2 class="text-xl font-semibold mb-2">{{ mainVideoTitle }}</h2>
-    <p>{{ mainVideoDescription }}</p>
-  </div>
-</div>
 
-<!-- Lista de Reproducción -->
-<div
-  class="bg-gray-300 hidden sm:flex sm:flex-col md:flex md:flex-col border-2 border-red-500"
->
-  <h3 class="text-lg font-semibold mb-4">Lista de Reproducción</h3>
-  <ul>
-    <li *ngFor="let video of playlist" class="mb-4">
-      <a (click)="playVideo(video)" class="cursor-pointer">
-        <img
-          class="w-full h-30"
-          [src]="'https://img.youtube.com/vi/' + video.id + '/hqdefault.jpg'"
-          alt="{{ video.title }}"
-        />
-      </a>
-      <p class="text-sm mt-2">{{ video.title }}</p>
-    </li>
-  </ul>
-</div>
+    <section class="bg-gray-300 w-[300px] md:w-[500px] lg:w-full p-4 flex-1 overflow-auto">
+      <h2 class="text-xl font-semibold mb-2">{{ mainVideoTitle }}</h2>
+      <p class="text-sm">{{ mainVideoDescription }}</p>
+    </section>
+  </main>
+
+  <!-- Lista de Reproducción -->
+  <aside
+    class="hidden sm:flex flex-col border-2 border-red-500 bg-gray-300 p-4 w-[280px] lg:h-full overflow-y-auto"
+  >
+    <h3 class="text-lg font-semibold mb-4">Lista de Reproducción</h3>
+    <ul class="space-y-4">
+      <li *ngFor="let video of playlist">
+        <a (click)="playVideo(video)" class="cursor-pointer block">
+          <img
+            class="w-full h-auto"
+            [src]="'https://img.youtube.com/vi/' + video.id + '/hqdefault.jpg'"
+            alt="{{ video.title }}"
+          />
+        </a>
+        <p class="text-sm mt-2">{{ video.title }}</p>
+      </li>
+    </ul>
+  </aside>
 </div>
