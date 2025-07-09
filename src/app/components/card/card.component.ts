@@ -10,6 +10,7 @@ export class CardComponent {
   @Input() title: string = '';
   @Input() description: string = '';
   @Input() image: string = '';
+  @Input() url: string = '';
 
   isFlipped: boolean = false;
 
