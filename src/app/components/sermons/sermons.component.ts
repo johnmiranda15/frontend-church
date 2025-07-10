@@ -6,13 +6,13 @@ import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
   templateUrl: './sermons.component.html'
 })
 export class SermonsComponent {
-  mainVideoId = 'DJyPx5u6sd0';  // ID del video principal
-  mainVideoTitle = 'Título del Video Principal';
+  mainVideoId = 'lhmz6wex4dA';  // ID del video principal
+  mainVideoTitle = 'Conociendo a la Iglesia Bautista de Pacora';
   mainVideoDescription = 'Descripción detallada del video principal...';
 
   playlist = [
-    { id: 'I8FNdellz3Y', title: 'Título del Video 1', description: 'Descripción del Video 1' },
-    { id: 'm7AZtSLv-wk', title: 'Título del Video 2', description: 'Descripción del Video 2' },
+    { id: '_qvXqlnsbrU', title: 'La Escalera que nos lleva a Dios. Génesis 28:10-22', description: 'Descripción del Video 1' },
+    { id: 'qEfIRaOe6wA', title: 'La Roca era Cristo. Éxodo 17:1-7', description: 'Descripción del Video 2' },
   ];
   constructor(private sanitizer: DomSanitizer) {}
 
