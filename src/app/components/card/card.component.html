@@ -4,7 +4,7 @@
 >
   <!--Primera Tarjeta-->
   <article
-    class="card w-[150px] h-[200px] text-center rounded-lg bg-cover bg-center overflow-hidden transition-transform duration-300 transform-style-preserve-3d cursor-pointer hover:scale-105 hover:shadow-lg sm:w-[190px] sm:h-[230px] md:w-[250px] md:h-[280px] lg:w-[270px] lg:h-[350px]"
+    class="card w-[180px] h-[240px] text-center rounded-lg bg-cover bg-center overflow-hidden transition-transform duration-300 transform-style-preserve-3d cursor-pointer hover:scale-105 hover:shadow-lg sm:w-[230px] sm:h-[280px] md:w-[300px] md:h-[340px] lg:w-[340px] lg:h-[420px]"
     [ngClass]="{ flipped: isFlipped }"
     (click)="toggleFlip()"
     [ngStyle]="{ 'background-image': 'url(' + image + ')' }"
@@ -14,26 +14,31 @@
       class="backface-hidden absolute w-full h-full flex items-center justify-center p-[10px]"
     >
       <h3
-        class="absolute top-4 left-1/2 transform -translate-x-1/2 text-white text-md font-bold bg-black/25 px-2 py-1 rounded-md shadow-lg inline-block"
+        class="absolute top-4 left-1/2 transform -translate-x-1/2 text-white text-xs font-bold bg-black/25 px-2 py-1 rounded-md shadow-lg inline-block sm:text-sm md:text-base lg:text-lg"
       >
         {{ title }}
       </h3>
     </div>
     <!--Parte Trasera de la Tarjeta-->
     <div
-      class="absolute w-full h-full bg-[#302023] flex flex-col items-center justify-start p-[10px] rotate-y-180 backface-hidden transition-transform duration-300"
+      class="absolute w-full h-full bg-[#302023] flex flex-col items-center justify-start p-2 rotate-y-180 backface-hidden transition-transform duration-300 sm:p-3 md:p-4"
     >
       <h3
-        class="flex justify-center items-start text-white text-[20px] p-[10px] rotate-y-180 backface-hidden transition-transform duration-300"
+        class="text-white text-sm font-bold mb-2 text-center rotate-y-180 backface-hidden transition-transform duration-300 sm:text-base md:text-lg lg:text-xl"
       >
         {{ title }}
       </h3>
       <p
-        class="flex justify-center items-end text-white text-[15px] p-[10px] rotate-y-180 backface-hidden transition-transform duration-300"
+        class="text-white text-xs leading-tight text-center flex-1 overflow-y-auto rotate-y-180 backface-hidden transition-transform duration-300 sm:text-sm md:text-base lg:leading-relaxed"
       >
         {{ description }}
       </p>
-      <a [href]="url" target="_blank" rel="noopener noreferrer" class="flex justify-center items-end text-blue-500 text-[15px] p-[5px] rotate-y-180 backface-hidden transition-transform duration-300">
+      <a 
+        [href]="url" 
+        target="_blank" 
+        rel="noopener noreferrer" 
+        class="text-blue-400 text-xs mt-2 hover:text-blue-300 transition-colors duration-200 rotate-y-180 backface-hidden transition-transform duration-300 sm:text-sm md:text-base"
+      >
         Más información
       </a>
     </div>
