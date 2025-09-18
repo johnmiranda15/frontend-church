@@ -1,36 +1,35 @@
 <div
-  class="relative w-screen min-h-screen max-w-full bg-cover bg-center bg-no-repeat"
+  class="absolute w-screen h-auto min-h-screen max-w-full bg-cover bg-center bg-no-repeat"
   style="background-image: url('/assets/img/mountain.jpg')"
 >
   <img
-    class="absolute w-[150px] ml-[100px] mt-[100px] sm:w-[200px] sm:mt-[40px] md:w-[230px] z-20"
+    class="absolute w-[150px] ml-[100px] mt-[100px] sm:w-[200px] sm:mt-[40px] md:w-[230px]"
     src="./assets/img/logo_p.png"
     alt="logo-ibp"
   />
-  <div class="relative z-10 pb-8">
-    <section class="mt-[270px] px-3">
+  <div class="relative z-10">
+    <section class="mt-[270px]">
       <h3
-        class="text-white text-[20px] font-bold underline leading-tight sm:text-[30px] md:text-[45px] lg:text-[55px] lg:pl-2"
+        class="text-white text-[20px] pl-3 font-bold underline leading-tight sm:text-[30px] sm:pl-2 md:text-[45px] lg:text-[55px] lg:pl-5"
       >
         {{ title }}
       </h3>
       <p
-        class="text-white text-[15px] leading-snug sm:text-[20px] md:text-[30px] lg:text-[35px] bg-black/15 px-2 py-1 rounded-md shadow-lg inline-block mt-4"
+        class="text-white text-[15px] pl-3 leading-snug sm:text-[20px] sm:pl-2 md:text-[30px] lg:p-5 lg:text-[35px] bg-black/15 px-2 py-1 rounded-md shadow-lg inline-block"
       >
         Somos una Iglesia Bautista Reformada en Panamá,<br />
         nuestras doctrinas se resumen en la Confesión Bautista de <br />
         Londres de 1689.
       </p>
     </section>
-
     <div
-      class="flex flex-col items-center gap-[10px] mt-8 px-3 sm:gap-[15px] md:flex-row md:flex-wrap md:justify-center md:gap-[20px]"
+      class="flex flex-col items-center gap-[10px] mt-4 sm:flex sm:flex-col sm:gap-[15px] md:flex-row md:flex-wrap md:justify-center md:gap-[20px]"
     >
       <app-card
         title="Adoración Pública"
         description="Desde los días de los apóstoles hasta esta hora, 
-        la adoración pública siempre ha 
-        sido uno de los grandes instrumentos de Dios que beneficia a las almas."
+      la adoración pública siempre ha 
+      sido uno de los grandes instrumentos de Dios que beneficia a las almas."
         image="/assets/img/cosmic.jpg"
         url="https://www.chapellibrary.org/book/pwors/adoracion-publica-rylejohnc"
       ></app-card>
@@ -38,9 +37,9 @@
       <app-card
         title="Testimonio a la Comunidad"
         description="El evangelismo bíblico es crucial en todo tiempo, 
-        pero esto es especialmente cierto hoy, en la época y cultura en la que vivimos. 
-        Hay una gran necesidad de evangelismo porque el evangelio es el único remedio 
-        duradero y eterno para los perdidos."
+      pero esto es especialmente cierto hoy, en la época y cultura en la que vivimos. 
+      Hay una gran necesidad de evangelismo porque el evangelio es el único remedio 
+      duradero y eterno para los perdidos."
         image="/assets/img/rezaulh.jpg"
         url="https://www.chapellibrary.org/book/bevas/evangelismo-biblico-venturarob"
       ></app-card>
@@ -54,10 +53,6 @@
         url="https://www.chapellibrary.org/book/fwo2s/culto-familiar-pinkarthurw"
       ></app-card>
     </div>
+    <hr class="w-[75%] my-[20px] mx-auto mt-[75px]" />
   </div>
-</div>
-
-<!-- Separador visual entre secciones -->
-<div class="w-full bg-gray-100 py-4">
-  <hr class="w-[75%] mx-auto border-gray-300" />
 </div>
